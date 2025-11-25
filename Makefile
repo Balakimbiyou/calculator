@@ -6,3 +6,9 @@ calculator.o: calculator.cpp
 
 main.o: main.cpp calculator.hpp
     g++ -o main.o -c main.cpp -W -Wall  -ansi -pedantic
+
+clean:
+rm -rf *.o
+
+mrproper: clean
+    rm -rf calculator
